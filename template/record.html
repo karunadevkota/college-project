@@ -1,0 +1,13 @@
+{% for i in record %}
+
+<h3>Criminal Name: {{i.criminal_name}} </h3>
+<p>Crime Type:  {{i.crime_type}} </p>
+<p> {{i.description}} </p>
+<p>Age:{{i.age}} </p>
+
+<p>Case Status: {{i.case_status}} </p>
+<p>Case Start Date: {{i.case_start_date}}</p>
+
+{% endfor %}
+
+<a href= "{% url 'index' %}">Back To Home</a>

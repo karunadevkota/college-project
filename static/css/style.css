@@ -1,0 +1,394 @@
+.header{
+	background-color: #1e7fb2;
+	height: 120px;
+}
+.header .navbar .nav-item .nav-link{
+	color: #fff;
+	padding: 35px  35px;
+	font-weight: 753;
+	margin-bottom: 18px;
+}
+
+
+
+.quick-cards {
+	background-color: rgb(248, 242, 231);
+	padding: 45px 0;
+	text-decoration: none;
+
+}
+
+.quick-cards .a{
+	text-decoration: none;
+}
+.quick-cards .card, a{
+	height: 80%;
+	text-decoration: none;
+}
+ .quick-cards .card:hover{
+	background-color: rgb(250, 2, 2);
+	color: #fff;
+	
+ }
+
+
+
+/* 
+.navbar{
+    height: 88px;
+    width: 100%;
+    background-color: #1e7fb2;
+} */
+
+/* .navbar ul{
+    float: right;
+    margin-right: 20px;
+} */
+
+/* .navbar ul li{
+    
+    margin: 0 8px;
+    display: inline-block;
+    line-height: 80px;
+    
+} */
+
+/* .navbar ul li a{
+    color: #ffffff;
+	font-size: 18px;
+	padding: 7px 13px;
+	text-decoration: none;
+} */
+
+
+
+/* 
+.navbar-mid{
+    height: 68px;
+    width: 100%;
+    background-color: rgb(248, 242, 231);
+}
+.navbar-mid ul{
+    float: right;
+    margin-right: 20px;
+} */
+
+
+
+
+.reports{
+	background-color: rgb(238, 227, 208);
+	padding: 45px 0;
+}
+
+.reports .reports-right{
+background-color: rgb(173, 172, 172);
+}
+
+
+/*footer section*/
+
+.footer{
+	background-color:#014569 ;
+	padding: 1px;
+	
+	
+}
+
+ .main-content{
+	display: flex;
+}
+
+.main-content .box{
+	padding: 10px 20px;
+}
+
+.box h2{
+	font-size: 1.125rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.box .content{
+	margin: 20px 0 0 0;
+}
+
+.left .content .social{
+	margin: 20px 0 0 0;
+}
+.lefft .content p{
+	text-align: justify;
+}
+
+.left .content .social a{
+	padding: 0 2px;
+}
+
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: white;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+} 
+
+
+
+
+
+
+/*About us*/
+/*
+.center {
+	height: 70vh;
+	width: 20%;
+	background: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-top: 85px;
+	
+}
+
+.center .h1 {
+	margin-bottom: 50px;
+	margin-top: 20px;
+}
+.center {
+	font-size: medium;
+	
+	
+}*/
+ 
+
+/*signup*/
+
+.signup-box{
+	width: 350px;
+    height: 565px;
+	margin: auto;
+	background-color: white;
+	border-radius: 3px;
+	border-style: groove;
+	margin-top: 25px;
+
+}
+
+h2{
+	text-align: center;
+	padding-top: 15px;
+
+}
+h4{
+	text-align: center;
+
+}
+
+ .form-design{
+	width: 290px;
+	margin-left: 20px;
+} 
+
+ .form-design label{
+	display: flex;
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+form input{
+	width: 100%;
+	padding: 7px;
+	border:none;
+	border: 1px solid gray;
+	border-radius: 6px;
+	outline: none;
+} 
+
+input[type="submit"]{
+	width: 290px;
+	height: 10px;
+	margin-top: 20px;
+	border: none;
+	background-color: #49c1a2;
+	color:white;
+	font-size: 18px;
+}
+
+p{
+	text-align: center;
+	padding-top: 20px;
+	font-size: 15px;
+
+}
+
+.para-2{
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	}
+
+
+.para-2 a{
+	color: #49c1a2;
+	margin-bottom: 120px;
+	padding-right: 150px;
+	}
+
+
+/*login box*/
+.login-box{
+		width: 340px;
+		height: 330px;
+		margin: auto;
+		background-color: white;
+		border-radius: 3px;
+		border-style: groove;
+		margin-top: 30px;
+	
+	
+}
+
+
+
+
+/* Report Crime */
+.report_form .report-form-wrapper{
+	padding: 35px;
+	background-color: #e6f5fd;
+	box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.219);
+	margin-top: 45px ;
+}
+.report_form .report-form-wrapper .form-control, .form-select{
+	padding: 10px;
+	border-color: #014569;
+}
+.report_form .report-form-wrapper .form-control, .form-select:focus{
+	box-shadow: none;
+}
+.report_form .report-form-wrapper .title, .sub-title{
+	color: #014569;
+	border-bottom: 2px solid #014569;
+	padding: 10px 0;
+	text-align: left;
+	margin-bottom: 15px;
+}
+.report_form .report-form-wrapper .submit-btn{
+	background-color: #014569;
+	color: #fff;
+border-radius: 50px;
+padding: 10px 35px;
+margin-top: 25px;
+}
+.navbar-toggler-icon{
+	width: 25px;
+	height:2px;
+	background-color: #fff;
+	margin: 4px 0;
+	display: block;
+}
+.navbar-collapse{
+	background-color: #1e7fb2;
+}
+
+
+
+
+/*emergency contacts */
+table{
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(32, 32, 32, .3);
+    height: 400px;
+    background: #fafafa;
+    text-align: center;
+	margin-top: 60px;
+}
+th,td{
+    padding: 10px 15px;
+}
+th{
+    background: #71A4DF;
+    color: #fafafa;
+    text-transform: uppercase;
+}
+
+/*police station nearme*/
+.map{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	color: #065a88;
+	margin-top: 10px;
+}
+.map .map-detail{
+	margin: 25px;
+}
+
+
+/*criminal status*/
+
+.search{
+	margin-top: 30px;
+	justify-content: center;
+}
+.search-field {
+	height: 40px;
+	padding: 10px;
+	border: none;
+	border-radius: 25px;
+	outline: none;
+	display: inline;
+	flex-direction: row;
+	
+	
+}
+.status {
+	width: 300px;
+	border-style: groove;
+}
+.location {
+	width: 200px;
+	border-style: groove;
+
+}
+.search-btn {
+	height: 50px;
+	width: 190px;
+	background: rgb(253, 167, 6);
+	border: none;
+	/* color: #000; */
+	border-radius: 25px;
+	
+}
+.search-btn:hover {
+	background: #ffc107;
+	cursor: pointer;
+}
+.form-box {
+	border-style: groove;
+	
+	padding: 20px 30px;
+	
+	
+	
+	width: 750px;
+	
+	padding-bottom: 30px;
+	margin-top: 140px;
+	margin-left: 280px;
+	border-radius: 19px;
+	
+}

@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!--Slider Section Started--> 
+     <div class="slider">
+      <div class="slider_wrapper owl-carousel owl-theme">
+        <div class="slider_inner">
+          <img src="/static/img/bg.png" height="390" width="1367" style="position: relative;" > 
+        </div>
+
+        <div class="slider_inner">
+          <img src="/static/img/al.png" height="390" width="1367" style="position: relative;" > 
+        </div>
+
+        
+        
+      </div>
+     </div>
+     <!--Slider Section Ended-->
+
+     <!--Quick Card Section Started-->
+     <section class="quick-cards">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-lg-3 ">
+            <div class="card p-4 text-center ">
+              <h5><i class="fa fa-bullhorn me-2"><a  href="{% url 'record'%}"> Criminal Records</a></i></h5>
+            </div>
+          </div>
+          <div class="col-lg-3 col-lg-3 ">
+            <div class="card p-4 text-center ">
+              <h5><i class="fa fa-newspaper-o me-2"><a href="{% url 'news'%}">News</a></i></h5>
+            </div>
+          </div>
+          <div class="col-lg-3 col-lg-3 ">
+            <div class="card p-4 text-center ">
+              <h5><i class="fa fa-phone me-2"><a href="{% url 'econtact'%}"> Emergency Contact</a></i></h5>
+            </div>
+          </div>
+          <div class="col-lg-3 col-lg-3 ">
+            <div class="card p-4 text-center ">
+              <h5><i class="fa fa-home me-2"><a href="{% url 'station'%}">Police Station Near By</a></i></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+     </section>
+     <!--Quick Card Section Ended-->
+     
+     <div class="container">
+      <canvas id="myChart" width="400" height="400"></canvas>
+      <script>
+      const ctx = document.getElementById('myChart').getContext('2d');
+      const myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['Robbery','Missing Person','Domestic Violence','Sexual Harrasement'], 
+              datasets: [{
+                  label: 'crime rates',
+                  data: [10,8,9,10,5],
+                  backgroundColor: [
+                      'red',
+                      'blue',
+                      'yellow',
+                      'pink',
+                      
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                     
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+           
+      </script>
+      </div>
+
+      <section class="reports">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="reports-left">
+                <h4>WHAT IS WEDO?</h4>
+                <p>WEDO is a platform for online crime reporting system.<br> Were people over nepal can directly report crime the<br> online.It covers
+                complete case management system<br> and this system will help in 
+              managing all activities<br> of the police station. It can be used to report
+              crimes<br> and manage all the activities in a police station using<br> computers by tracking all the details of complaints. 
+                <h4 class="order" style="padding-top:60px">HOW DO WE REPORT?</h4>
+                <p>To report you have to login and fill a form<br> to register the complaints. After registering<br> you will get call for further inquiry.</p>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="reports-right p-3">
+<h4 class="title" style="margin-left: 130px;" >TODAY'S CASE STATUS</h4>
+
+<ul>
+  <li>
+    {% for i in case %}
+
+    
+     <h6 class="design" style="padding:15px;">Total Cases</h6>
+     <span class="design" style="padding: 250px 20px;">{{i.totalcases}}</span>
+     </li>
+     <li>
+    
+     <h6 class="design" style="padding:15px;">Solved Cases</h6>
+     <span  class="design" style="padding: 250px 20px;">{{i.solvedcases}}</span>
+     </li>
+     <li>
+     <h6 class="design" style="padding:15px;">On Progress</h6>
+     <span  class="design" style="padding: 250px 20px;">{{i.onprogress}}</span>
+     </li>
+     <li>
+     <h6 class="design" style="padding:15px;">Others</h6>
+     <span  class="design" style="padding: 250px 20px;">{{i.others}}</span>
+     </li>
+     </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    {% endfor %}  
+      {% endblock %}
+       
+
+        
+        
+        
+        
+        
+        
+
+ 

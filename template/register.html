@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block content %}
+{% if status %}
+<script>
+    alert('{{status}}');
+</script>
+{% endif %}
+
+{% if error %}
+<script>
+    alert('{{error}}');
+</script>
+{% endif %}
+    <div class="signup-box" style="	height: 565px !important;">
+        <h2>Sign Up</h2>
+        <form method="POST" class="form-design" action="">
+            {% csrf_token %}
+            <label>Full Name</label>
+            <input type="text" name="name" id="name" placeholder="" required />
+
+            <label>Email</label>
+            <input type="email" name="email" id="email" placeholder="" required onkeyup="check_email()"/>
+
+            <label>Password</label>
+            <input type="password" name="pass" id="pass" placeholder="" onkeyup="checkPass()" required />
+
+            <label>Confirm Password</label>
+            <input type="password" name="re_pass" id="re_pass" placeholder="" onkeyup="checkPass()" required />
+    
+            <label>Contact Number</label>
+            <input type="text" name="number" id="number" placeholder="" pattern="[0-9]{10}" title="Number must contain 10 digits only!" required />
+
+            <input type="submit" name="signup" id="signup" class="form-submit" style="margin-bottom: 10px; height: 50px; background:#49c1a2;" value="Register"/> 
+        </form>
+        </div>
+        
+        
+        <p>By clicking the Sign Up button, you agree to our <br>
+            <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+            </p>
+          
+        <p class="para-2">Already have an account? <a href="{%url 'login'%}">Login here</a></p>
+    
+    
+    
+    
+    {% endblock %}
+    {% block script %}
+<script>
+    function checkPass(){
+        var p = $('#pass').val();
+        var cp = $('#re_pass').val();
+        if(p==cp){
+            $("#signup").attr('disabled',false).css({'background':'#6dabe4'});
+            $('#msz').html('');
+        }else{
+
+            $("#signup").attr('disabled',true).css({'background':'red'});
+            $('#msz').html("<small>Password didn't matched!</small>");
+
+        }
+    }
+
+    function check_email(){
+        var email = document.getElementById('email').value;
+        $.ajax({
+            url:'{% url "check_user_exist" %}',
+            type:'get',
+            data:{usern:email},
+            success:function(data){
+                if(data.status==0){
+                    $("#signup").attr('disabled',false).css({'background':'#719a0a'});
+                    $('#msz').html('');
+                }else{
+                    $("#signup").attr('disabled',true).css({'background':'red'});
+                    $('#msz').html("<small>"+data.message+"</small>");
+
+                }
+            }
+        })
+    }
+
+</script>
+{% endblock%} 
